@@ -1,0 +1,195 @@
+.schedule {
+    height: 100vh;
+    position: relative;
+    // background: var(--color-main);
+    overflow: hidden;
+    padding: var(--size-lg);
+    position: relative;
+    z-index: 2;
+
+    &__content {
+        position: relative;
+        height: 100%;
+        width: 100%;
+
+        // Стили для визуальных соединительных линий
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            // background-image: linear-gradient(90deg, transparent 79%, rgba(var(--color-bright-rgb), 0.1) 79%), linear-gradient(90deg, transparent 64%, rgba(var(--color-bright-rgb), 0.1) 64%), linear-gradient(45deg, transparent 45%, rgba(var(--color-bright-rgb), 0.1) 45.5%);
+            background-size: 100% 100%;
+            pointer-events: none;
+            z-index: 0;
+        }
+    }
+
+    &__item {
+        position: absolute;
+        max-width: 400px;
+        // padding: var(--size-md);
+        padding-left: var(--size-md);
+        // background: rgba(255, 255, 255, 0.95);
+        border-radius: var(--size-xs);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        cursor: pointer;
+        // transition: all 0.3s ease;
+        // border-left: 3px solid var(--color-bright);
+        z-index: 2;
+
+        // Позиционирование элементов в хаотичном, но структурированном порядке
+        &:nth-child(1) {
+            top: 5%;
+            left: 0;
+        }
+
+        &:nth-child(2) {
+            top: 30%;
+            left: 10%;
+        }
+
+        &:nth-child(3) {
+            top: 55%;
+            left: 20%;
+        }
+
+        &:nth-child(4) {
+            top: 40%;
+            left: 50%;
+            max-width: 400px;
+        }
+
+        &:nth-child(5) {
+            top: 25%;
+            left: 55%;
+            max-width: 400px;
+        }
+
+        &:nth-child(6) {
+            top: 10%;
+            left: 65%;
+            max-width: 400px;
+        }
+    }
+
+    &__dot {
+        position: absolute;
+        left: 0;
+        top: var(--size-xxxs);
+        width: var(--size-xxxs);
+        height: var(--size-xxxs);
+        background-color: var(--color-bright);
+        border-radius: 50%;
+        box-shadow: 0 0 0 4px rgba(var(--color-bright-rgb), 0.2);
+    }
+
+    &__text {
+        font-size: var(--size-xs);
+        color: var(--color-text);
+        line-height: 1.6;
+        font-weight: 300;
+    }
+
+    // Адаптивность
+    @media (max-width: 1200px) {
+        padding: var(--size-md);
+
+        // &__dot {
+        //     left: var(--size-sm);
+        // }
+    }
+
+    @media (max-width: 768px) {
+        height: auto;
+        // min-height: 100vh;
+        padding: var(--size-sm);
+
+        &__content::before {
+            display: none;
+        }
+
+        &__item {
+            position: relative;
+            top: auto !important;
+            left: auto !important;
+            max-width: 100%;
+            margin-bottom: var(--size-sm);
+            margin-right: 5vw;
+
+            &:nth-child(1) {
+                margin-left: 5vw;
+            }
+
+            &:nth-child(2) {
+                margin-left: 8vw;
+            }
+
+            &:nth-child(3) {
+                margin-left: 20vw;
+            }
+
+            &:nth-child(4) {
+                margin-left: 4vw;
+            }
+
+            &:nth-child(5) {
+                margin-left: 5vw;
+            }
+
+            &:nth-child(6) {
+                margin-left: 0;
+            }
+        }
+
+        &__dot {
+            top: calc(var(--size-sm) + 2px);
+        }
+    }
+
+    @media (max-width: 480px) {
+        padding: var(--size-xs);
+
+        &__item {
+            padding: var(--size-xs);
+            padding-left: calc(var(--size-xs) + var(--size-sm));
+            margin-bottom: var(--size-xs);
+
+            &:nth-child(1) {
+                margin-left: 5vw;
+            }
+
+            &:nth-child(2) {
+                margin-left: 8vw;
+            }
+
+            &:nth-child(3) {
+                margin-left: 20vw;
+            }
+
+            &:nth-child(4) {
+                margin-left: 4vw;
+            }
+
+            &:nth-child(5) {
+                margin-left: 5vw;
+            }
+
+            &:nth-child(6) {
+                margin-left: 0;
+            }
+        }
+
+        &__dot {
+            left: var(--size-xs);
+            top: calc(var(--size-xs) + 2px);
+        }
+    }
+}
+
+// Для работы с RGB значениями (если нужно)
+:root {
+    --color-bright-rgb: 0, 102, 204; // RGB эквивалент var(--color-bright)
+}

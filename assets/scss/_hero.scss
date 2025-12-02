@@ -1,0 +1,101 @@
+.hero {
+    color: var(--color-bright);
+    // padding-top: calc(var(--size-sm) * 5);
+    background: var(--color-main);
+    min-height: 100vh;
+    overflow: hidden;
+    position: relative;
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        // min-height: 70vh;
+        gap: var(--size-sm);
+        position: relative;
+        z-index: 1;
+        height: calc(100vh - (var(--size-sm) * 2));
+    }
+
+    &__info {
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: var(--size-xs);
+        gap: var(--size-xxxs);
+        // text-transform: uppercase;
+        font-weight: 700;
+
+        filter: drop-shadow(-10px 3px 3.7px rgba(0, 0, 0, 0.25));
+
+        &--big {
+            font-size: var(--size-sm);
+        }
+
+        @include sm {
+            gap: var(--size-sm);
+            flex-direction: row;
+        }
+    }
+
+    &__description {
+        font-weight: 200;
+        font-size: var(--size-xs);
+        margin-top: var(--size-sm);
+        text-align: center;
+    }
+
+    &__headline {
+        font-size: 7vw;
+
+        margin-block: auto;
+        background: linear-gradient(183deg, #afe5e1 -10%, rgba(113, 90, 74, 0) 90%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+
+        filter: drop-shadow(0px 0.3vw 0.3vw rgba(0, 0, 0, 0.25));
+
+        /* Для лучшего сглаживания текста */
+        // -webkit-font-smoothing: antialiased;
+        // -moz-osx-font-smoothing: grayscale;
+    }
+
+    &__button {
+        margin-top: var(--size-sm);
+        background-color: var(--color-second);
+        color: var(--color-main);
+    }
+
+    &__planet {
+        position: absolute;
+        inset-inline: 22vw;
+        bottom: 0;
+        transform: translateY(50%);
+        width: 56vw;
+
+        transform-origin: center center;
+
+        animation: rotatePlanet 30s linear infinite;
+        z-index: 0;
+    }
+
+    @keyframes rotatePlanet {
+        from {
+            transform: translateY(50%) rotate(0deg);
+        }
+        to {
+            transform: translateY(50%) rotate(-360deg);
+        }
+    }
+
+    &__circle {
+        position: absolute;
+        inset-inline: 5vw;
+        width: 90vw;
+        bottom: 0;
+        z-index: 0;
+    }
+}

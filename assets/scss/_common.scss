@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box !important;
+    font-family: Main, Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    text-wrap: wrap;
+    scroll-behavior: smooth;
+    color: var(--color-bright);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+    word-break: break-word;
+}
+
+html {
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+body {
+    background: url(images/background.png);
+    background-size: 100% auto;
+    background-repeat: repeat-y;
+    background-position: center top;
+    overflow-x: hidden;
+    min-height: 100vh;
+    position: relative;
+    width: 100vw;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    text-decoration: none;
+    list-style: none;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    padding: var(--size-sm);
+    gap: var(--size-sm);
+}
+
+.headline {
+    font-family: Second;
+    font-size: 4.5vw;
+    line-height: 1.2;
+    text-align: center;
+    background: linear-gradient(180deg, #afe5e1 -10%, rgba(113, 90, 74, 0) 90%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    filter: drop-shadow(0px 0.3vw 0.3vw rgba(0, 0, 0, 0.25));
+}
+
+.paragraph {
+    font-size: var(--size-sm);
+}
+
+.divider {
+    display: inline-block;
+    width: var(--size-xxs);
+    height: var(--size-xxs);
+    border-radius: 10pc;
+    background-color: var(--color-second);
+}
+
+.unite {
+    display: flex;
+    // gap: var(--size-sm);
+    width: 100%;
+
+    &--column {
+        flex-direction: column;
+    }
+}
+
+.extra-bold {
+    font-weight: 800;
+}
+
+.z1 {
+    z-index: 1 !important;
+    position: relative;
+}
+
+.z2 {
+    z-index: 2 !important;
+    position: relative;
+}
+
+.w100 {
+    width: 100% !important;
+}
+
+.outline-text {
+    -webkit-text-stroke: 2px white;
+    text-stroke: 2px white;
+    color: rgba(0, 0, 0, 0) !important;
+}
+
+.text-color-main {
+    color: var(--color-main) !important;
+}
+
+.connector-lines {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.connector-line {
+    stroke: rgba(255, 255, 255, 0.9);
+    stroke-width: 1; /* Тонкие линии */
+    stroke-linecap: round;
+    fill: none;
+}

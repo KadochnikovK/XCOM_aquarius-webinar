@@ -1,0 +1,171 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    // padding: var(--size-sm);
+    // background-color: red;
+
+    &__button {
+        margin-left: auto;
+        margin-top: var(--size-sm);
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        background-color: var(--color-second);
+        padding: var(--size-sm);
+        border-radius: var(--size-md);
+    }
+
+    &__inputs {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: var(--size-sm);
+        row-gap: var(--size-sm);
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        grid-column: span 2;
+        position: relative;
+
+        &--not-valid:not(.form__item--checkbox) {
+            position: relative;
+
+            .form__input {
+                outline: 2px solid var(--color-red);
+                color: var(--color-red);
+                padding-right: 30px;
+            }
+
+            .form__label {
+                color: var(--color-red);
+            }
+
+            &::after {
+                content: "✕";
+                position: absolute;
+                right: 10px;
+                bottom: -2px;
+                transform: translateY(-50%);
+                color: var(--color-red);
+                font-size: 24px;
+                font-weight: 600;
+
+                @media (min-width: 640px) {
+                    bottom: 10px;
+                    right: 16px;
+                }
+
+                @media (min-width: 1200px) {
+                    font-size: 28px;
+                    right: 24px;
+                    bottom: 16px;
+                }
+            }
+        }
+
+        &--focused {
+            .form__label {
+                color: var(--color-dark) !important;
+            }
+
+            .form__input {
+                border-color: var(--color-dark);
+                color: var(--color-dark);
+                outline: 2px solid var(--color-dark) !important;
+            }
+        }
+
+        &--checkbox {
+            display: flex;
+            margin-top: var(--size-md);
+            position: relative;
+            padding-left: 30px;
+        }
+
+        @media (min-width: 640px) {
+            grid-column: span 1;
+        }
+
+        &:nth-last-child(1) {
+            grid-column: span 2;
+        }
+    }
+
+    &__checkbox {
+        position: absolute;
+        opacity: 0;
+        left: 0;
+
+        & + label {
+            position: relative;
+            cursor: pointer;
+            padding: 0;
+            font-size: var(--size-xxs);
+            color: var(--color-dark);
+            font-weight: 500;
+        }
+
+        & + label:before {
+            content: "";
+            position: absolute;
+            left: -30px;
+            top: 0;
+            width: 20px;
+            height: 20px;
+            border: 1px solid var(--color-dark);
+            border-radius: 10pc;
+            // background: var(--color-white);
+        }
+
+        &:checked + label:after {
+            content: "";
+            position: absolute;
+            left: -24px;
+            top: 6px;
+            width: 10px;
+            height: 10px;
+            background: var(--color-main);
+            border-radius: 10pc;
+        }
+
+        &:focus + label:before {
+            box-shadow: 0 0 0 2px var(--color-main);
+        }
+    }
+
+    &__input {
+        padding: var(--size-md);
+        font-size: var(--size-sm);
+        border: 1px solid var(--color-dark);
+        border-radius: var(--size-xs);
+        color: var(--color-dark);
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0);
+
+        padding-left: var(--size-md) !important;
+
+        &:focus {
+            // border-color: 3px solid var(---color-main);
+            // outline: none;
+        }
+    }
+
+    &__label {
+        font-size: var(--size-sm);
+        margin-bottom: var(--size-xxxs);
+        font-weight: 500;
+        color: var(--color-dark);
+    }
+}
+
+.error-message {
+    display: none;
+    position: absolute;
+    top: 92%;
+    color: #ff0000;
+    font-size: var(--fs-xxxs);
+    margin-top: 5px;
+}

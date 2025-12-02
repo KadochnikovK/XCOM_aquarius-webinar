@@ -1,0 +1,24 @@
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Main;
+    font-weight: 800;
+    color: var(--color-main);
+    font-size: var(--size-sm);
+    border-radius: var(--size-sm);
+    padding: var(--size-xs) var(--size-xl);
+    background-color: var(--color-bright);
+    text-align: center;
+    max-width: max-content;
+    width: 100%;
+    transition: all 0.3s ease-in-out;
+    border: none;
+    outline: none;
+    cursor: pointer;
+
+    &:hover {
+        background-color: var(--color-dark);
+        color: var(--color-bright);
+    }
+}
