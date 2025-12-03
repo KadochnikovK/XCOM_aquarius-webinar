@@ -22,9 +22,13 @@
     }
 
     &__logo {
-        height: calc(var(--fs-xl) * 1.5);
+        // height: calc(var(--size-xl) * 1.5);
         grid-column: 1 / -1;
         display: block;
+    }
+
+    &__logo-img {
+        height: calc(var(--size-md) * 1.5);
     }
 
     &__links {
@@ -109,8 +113,8 @@
         }
 
         img {
-            width: var(--size-md);
-            height: var(--size-md);
+            width: var(--size-lg);
+            height: var(--size-lg);
 
             // @media (min-width: 1200px) {
             //     width: 20px;

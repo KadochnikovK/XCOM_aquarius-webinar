@@ -6,11 +6,15 @@
 
     &__button {
         margin-left: auto;
+        margin-right: auto;
         margin-top: var(--size-sm);
         background: var(--color-main);
         color: var(--color-bright);
         box-shadow: 5px 11px 6.8px rgba(0, 0, 0, 0.5);
 
+        @include sm {
+            margin-right: 0;
+        }
     }
 
     &__wrapper {
@@ -55,22 +59,22 @@
                 content: "✕";
                 position: absolute;
                 right: 10px;
-                bottom: -2px;
+                top: calc(50% + var(--size-sm));
                 transform: translateY(-50%);
                 color: var(--color-red);
-                font-size: 24px;
+                font-size: var(--size-sm);
                 font-weight: 600;
 
-                @media (min-width: 640px) {
-                    bottom: 10px;
-                    right: 16px;
-                }
+                // @media (min-width: 640px) {
+                //     bottom: 10px;
+                //     right: 16px;
+                // }
 
-                @media (min-width: 1200px) {
-                    font-size: 28px;
-                    right: 24px;
-                    bottom: 16px;
-                }
+                // @media (min-width: 1200px) {
+                //     font-size: 28px;
+                //     right: 24px;
+                //     bottom: 16px;
+                // }
             }
         }
 
@@ -107,7 +111,7 @@
         opacity: 0;
         left: 0;
 
-        &+label {
+        & + label {
             position: relative;
             cursor: pointer;
             padding: 0;
@@ -116,7 +120,7 @@
             font-weight: 500;
         }
 
-        &+label:before {
+        & + label:before {
             content: "";
             position: absolute;
             left: -30px;
@@ -128,7 +132,7 @@
             // background: var(--color-white);
         }
 
-        &:checked+label:after {
+        &:checked + label:after {
             content: "";
             position: absolute;
             left: -24px;
@@ -139,14 +143,14 @@
             border-radius: 10pc;
         }
 
-        &:focus+label:before {
+        &:focus + label:before {
             box-shadow: 0 0 0 2px var(--color-main);
         }
     }
 
     &__input {
-        padding: var(--size-md);
-        font-size: var(--size-sm);
+        padding: var(--size-xxs);
+        font-size: var(--size-xs);
         border: 1px solid var(--color-dark);
         border-radius: var(--size-xs);
         color: var(--color-dark);
@@ -174,6 +178,6 @@
     position: absolute;
     top: 92%;
     color: #ff0000;
-    font-size: var(--fs-xxxs);
+    font-size: var(--size-xxs);
     margin-top: 5px;
 }

@@ -18,6 +18,10 @@ html {
     overflow-x: hidden;
 }
 
+main {
+    overflow: hidden;
+}
+
 body {
     background: url(images/background.png);
     background-size: 100% auto;
@@ -47,7 +51,7 @@ li {
 
 .headline {
     font-family: Second;
-    font-size: 4.5vw;
+    font-size: 4.2vw;
     line-height: 1.2;
     text-align: center;
     background: linear-gradient(180deg, #afe5e1 -10%, rgba(113, 90, 74, 0) 90%);

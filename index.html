@@ -1,249 +1,245 @@
 <!DOCTYPE html>
 <html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/style.css" />
+    <link rel="stylesheet" href="assets/plugins/animations/animations.css" />
+    <title>XCOM — Aquaris webinar</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="assets/style.css" />
-  <link rel="stylesheet" href="assets/plugins/animations/animations.css" />
-  <title>XCOM — Aquaris webinar</title>
-</head>
-
-<body class="body">
-  <header class="header container">
-    <div class="container__content header__content">
-
-      <div class="menu header__menu">
-        <div class="menu__hamburger">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-
-        <nav class="menu__list">
-          <a class="menu__link" href="#schedule">Программа</a>
-          <a class="menu__link" href="#speaker">Спикер</a>
-          <a class="menu__link" href="#registration">Регистрация</a>
-
-        </nav>
-      </div>
-    </div>
-  </header>
-
-  <main>
-    <section class="container hero">
-      <img class="hero__planet" src="assets/images/planet.png" alt="" />
-      <img class="hero__circle" src="assets/images/circles.svg" alt="" />
-
-      <div class="container__content hero__content">
-        <h1 class="headline hero__headline">ВЕБИНАР</h1>
-        <p class="paragraph hero__info hero__info--big">09 декабря <span class="divider"></span>11:00<span
-            class="divider"></span>2025</p>
-        <p class="paragraph hero__info">Комплексный подход к построению надежной и безопасной ИТ-инфраструктуры |
-          AQUARIUS</p>
-        <a href="#registration" class="button hero__button">Зарегистрироваться</a>
-      </div>
-    </section>
-    <section class="container schedule" id="schedule">
-      <h2 class="headline schedule__headline">Программа</h2>
-      <svg class="connector-lines" xmlns="http://www.w3.org/2000/svg"></svg>
-      <div class="container__content schedule__content">
-        <div class="schedule__item">
-          <div class="schedule__dot"></div>
-          <div class="schedule__text">Знакомство с компанией Аквариус и разговор о том, как сегодня устроено
-            производство ИТ оборудования</div>
-        </div>
-
-        <div class="schedule__item">
-          <div class="schedule__dot"></div>
-          <div class="schedule__text">Разговор о некоторых трендах и о том, куда движется российский рынок оборудования
+  <body class="body">
+    <header class="header container">
+      <div class="container__content header__content">
+        <div class="menu header__menu">
+          <div class="menu__hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
           </div>
-        </div>
 
-        <div class="schedule__item">
-          <div class="schedule__dot"></div>
-          <div class="schedule__text">Знакомство с продуктовым портфелем компании и планами по развитию экосистемы</div>
-        </div>
-
-        <div class="schedule__item">
-          <div class="schedule__dot"></div>
-          <div class="schedule__text">Разговор о вопросах информационной безопасности и почему надо это рассматривать в
-            комплексе</div>
-        </div>
-
-        <div class="schedule__item">
-          <div class="schedule__dot"></div>
-          <div class="schedule__text">ПАКи: что это такое, почему на них растет спрос и что есть у Аквариуса</div>
-        </div>
-
-        <div class="schedule__item">
-          <div class="schedule__dot"></div>
-          <div class="schedule__text">Планы на будущее: какие новинки нас ждут в 2026 году</div>
+          <nav class="menu__list">
+            <a class="menu__link" href="#schedule">Программа</a>
+            <a class="menu__link" href="#speaker">Спикер</a>
+            <a class="menu__link" href="#registration">Регистрация</a>
+          </nav>
         </div>
       </div>
-    </section>
-    <section class="container speakers" id="speaker">
-      <img class="speakers__circle" src="assets/images/circles.svg" alt="" />
-      <h2 class="headline speakers__headline">Спикеры</h2>
+    </header>
 
-      <div class="container__content speakers__content">
-        <div class="speakers__wrapper">
-          <img class="speakers__image" src="assets/images/speaker.png" alt="">
-          <p class="speakers__name">Олег Марин</p>
-          <p class="speakers__description">Заместитель директора по продуктовому развитию</p>
-        </div>
-      </div>
-    </section>
-    <section class="container registration" id="registration">
-      <h2 class="headline">Регистрация</h2>
-      <div class="container__content registration__content">
-        <form class="form" id="main-form" action="#">
-          <div class="form__wrapper">
-            <div class="form__inputs">
+    <img class="" src="assets/images/planet.png" alt="" style="z-index: -10; bottom: 100%; opacity: 0; position: absolute; bottom: 0; transform: translateY(50%); width: 1vw; min-width: 00px" />
 
-              <div class="form__item form__item--full">
-                <label for="name" class="form__label">ФИО</label>
-                <input type="text" class="form__input" placeholder=" " name="surname" value="" />
-              </div>
+    <main>
+      <section class="container hero">
+        <img class="hero__planet hero__planet--desktop" src="assets/images/planet.png" alt="" />
+        <img class="hero__circle" src="assets/images/circles.svg" alt="" />
 
-              <div class="form__item form__item--full">
-                <label for="company" class="form__label">Наименование организации</label>
-                <input type="text" class="form__input" placeholder=" " name="company" value="" />
-              </div>
+        <div class="container__content hero__content">
+          <h1 class="headline hero__headline" style="z-index: 2">ВЕБИНАР</h1>
+          <p class="paragraph hero__info hero__info--big" style="z-index: 2">09 декабря <span class="divider"></span>11:00<span class="divider"></span>2025</p>
+          <p class="paragraph hero__info" style="z-index: 2">Комплексный подход к построению надежной и безопасной ИТ-инфраструктуры | AQUARIUS</p>
 
-              <div class="form__item">
-                <label for="taxId" class="form__label">ИНН</label>
-                <input type="taxId" class="form__input" placeholder=" " name="taxId" value="" />
-              </div>
-
-              <div class="form__item">
-                <label for="email" class="form__label">E-mail</label>
-                <input type="email" class="form__input" placeholder=" " name="email" value="" />
-              </div>
-
-              <div class="form__item form__item--checkbox">
-                <input type="checkbox" id="privacy-policy" name="privacy-policy" class="form__checkbox" checked />
-                <label for="privacy-policy" class="form__checkbox-label">Я согласен на обработку персональных
-                  данных</label>
-                <div class="error-message" style="display: none"></div>
-              </div>
+          <a href="#registration" class="button hero__button"
+            >Зарегистрироваться
+            <div class="hero__mobile-planet-wrapper">
+              <img class="hero__planet hero__planet--mobile" src="assets/images/planet.png" alt="" />
             </div>
-
-            <button type="submit" class="form__button button">Зарегистрироваться</button>
+          </a>
+        </div>
+      </section>
+      <section class="container schedule" id="schedule">
+        <h2 class="headline schedule__headline">Программа</h2>
+        <svg class="connector-lines" xmlns="http://www.w3.org/2000/svg"></svg>
+        <div class="container__content schedule__content">
+          <div class="schedule__item">
+            <div class="schedule__dot"></div>
+            <div class="schedule__text">Знакомство с компанией Аквариус и разговор о том, как сегодня устроено производство ИТ оборудования</div>
           </div>
-        </form>
-      </div>
-    </section>
-  </main>
-  <footer class="footer container" id="contacts">
-    <div class="footer__content container__content">
-      <a href="https://www.xcom.ru/" class="footer__logo">
-        <img class="logo footer__logo-img" src="./assets/images/logo.svg" alt="XCOM" />
-      </a>
 
-      <div class="footer__links">
-        <div class="footer__item">
-          <p class="footer__label">О компании</p>
-          <div class="footer__text">
-            <a href="#">История</a>
-            <a href="#">О компании</a>
-            <a href="#">About us</a>
-            <a href="#">Вакансии</a>
-            <a href="#">Акции</a>
-            <a href="#">Бизнес-акселератор X-Com</a>
-            <a href="#">Проекты</a>
-            <a href="#">Пресс-центр</a>
-            <a href="#">Статьи об импортозамещении</a>
+          <div class="schedule__item">
+            <div class="schedule__dot"></div>
+            <div class="schedule__text">Разговор о некоторых трендах и о том, куда движется российский рынок оборудования</div>
+          </div>
+
+          <div class="schedule__item">
+            <div class="schedule__dot"></div>
+            <div class="schedule__text">Знакомство с продуктовым портфелем компании и планами по развитию экосистемы</div>
+          </div>
+
+          <div class="schedule__item">
+            <div class="schedule__dot"></div>
+            <div class="schedule__text">Разговор о вопросах информационной безопасности и почему надо это рассматривать в комплексе</div>
+          </div>
+
+          <div class="schedule__item">
+            <div class="schedule__dot"></div>
+            <div class="schedule__text">ПАКи: что это такое, почему на них растет спрос и что есть у Аквариуса</div>
+          </div>
+
+          <div class="schedule__item">
+            <div class="schedule__dot"></div>
+            <div class="schedule__text">Планы на будущее: какие новинки нас ждут в 2026 году</div>
           </div>
         </div>
-      </div>
+      </section>
+      <section class="container speakers" id="speaker">
+        <img class="speakers__circle" src="assets/images/circles.svg" alt="" />
+        <h2 class="headline speakers__headline">Спикеры</h2>
 
-      <div class="footer__links">
-        <div class="footer__item">
-          <p class="footer__label">Системная интеграция</p>
-          <div class="footer__text">
-            <a href="#">Монтаж и пусконакладка серверов</a>
-            <a href="#">Построение СХД и внедрение NAS-массивов под ключ</a>
-            <a href="#">Внедрение программного обеспечения под ключ</a>
-            <a href="#">Внедрение и сервис сетевого оборудования</a>
-            <a href="#">Внедрение офисных IP-ATC</a>
-            <a href="#">Оснащение и сервис рабочих мест</a>
-            <a href="#">Внедрение систем корпоративной печати</a>
-            <a href="#">Построение инженерных инфраструктур</a>
-            <a href="#">Внедрение и сервис систем безопасности</a>
-            <a href="#">Расчет, поставка, монтаж и обслуживание кабеленесущих систем</a>
-            <a href="#">Аутсорсинг информационной безопасности</a>
-            <a href="#">Мультимедийные решения для корпоративных коммуникаций</a>
+        <div class="container__content speakers__content">
+          <div class="speakers__wrapper">
+            <img class="speakers__image" src="assets/images/speaker.png" alt="" />
+            <p class="speakers__name">Олег Марин</p>
+            <p class="speakers__description">Заместитель директора по продуктовому развитию</p>
           </div>
         </div>
-      </div>
+      </section>
+      <section class="container registration" id="registration">
+        <h2 class="headline">Регистрация</h2>
+        <div class="container__content registration__content">
+          <form class="form" id="main-form" action="#">
+            <div class="form__wrapper">
+              <div class="form__inputs">
+                <div class="form__item form__item--full">
+                  <label for="name" class="form__label">ФИО</label>
+                  <input type="text" class="form__input" placeholder=" " name="surname" value="" />
+                </div>
 
-      <div class="footer__links">
-        <div class="footer__item">
-          <p class="footer__label">Мероприятия</p>
-          <div class="footer__text">
-            <p class="footer__sub-label">2024</p>
-            <a href="#">Вебинар X-Com и Катюша</a>
-            <a href="#">Вебинар Видеорегистраторы TRASSIR</a>
-            <a href="#">Бизнес-ужин X-Com совместно с IRBIS, Systeme Electric, IDS</a>
-            <a href="#">ИТ-конференция X-Com "Energy Day"</a>
-            <a href="#">Конференция "Здрав IT"</a>
-            <a href="#">Вебинар "Печать без границ: новый уровень экономии и качества"</a>
-            <a href="#">Демо-день конкурса "Беспилотники: поможем взлететь Вашему бизнесу"</a>
+                <div class="form__item form__item--full">
+                  <label for="company" class="form__label">Наименование организации</label>
+                  <input type="text" class="form__input" placeholder=" " name="company" value="" />
+                </div>
 
-            <p class="footer__sub-label">2025</p>
-            <a href="#">Конференция "Цифровизация науки и образования"</a>
-            <a href="#">Вебинар "Обзор печатной техники российского производителя"</a>
-            <a href="#">Конференция "Интеграторы систем безопасности"</a>
-            <a href="#">Конференция "Pro-AV"</a>
-            <a href="#">Вебинар "Пилотные проекты российского софта"</a>
-            <a href="#">Конференция "Системы безопасности"</a>
+                <div class="form__item">
+                  <label for="taxId" class="form__label">ИНН</label>
+                  <input type="taxId" class="form__input" placeholder=" " name="taxId" value="" />
+                </div>
+
+                <div class="form__item">
+                  <label for="email" class="form__label">E-mail</label>
+                  <input type="email" class="form__input" placeholder=" " name="email" value="" />
+                </div>
+
+                <div class="form__item form__item--checkbox">
+                  <input type="checkbox" id="privacy-policy" name="privacy-policy" class="form__checkbox" checked />
+                  <label for="privacy-policy" class="form__checkbox-label">Я согласен на обработку персональных данных</label>
+                  <div class="error-message" style="display: none"></div>
+                </div>
+              </div>
+
+              <button type="submit" class="form__button button">Зарегистрироваться</button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer class="footer container" id="contacts">
+      <div class="footer__content container__content">
+        <a href="https://www.xcom.ru/" class="footer__logo">
+          <img class="logo footer__logo-img" src="./assets/images/logo.svg" alt="XCOM" />
+        </a>
+
+        <div class="footer__links">
+          <div class="footer__item">
+            <p class="footer__label">О компании</p>
+            <div class="footer__text">
+              <a href="#">История</a>
+              <a href="#">О компании</a>
+              <a href="#">About us</a>
+              <a href="#">Вакансии</a>
+              <a href="#">Акции</a>
+              <a href="#">Бизнес-акселератор X-Com</a>
+              <a href="#">Проекты</a>
+              <a href="#">Пресс-центр</a>
+              <a href="#">Статьи об импортозамещении</a>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="footer__contacts">
-        <div class="footer__item">
-          <p class="footer__label">Контакты</p>
-          <div class="footer__text">
-            <span>+7 (495) 223-63-39 (Москва)</span>
-            <span>+7 (812) 740-11-20 (Санкт-Петербург)</span>
-            <span>Электронная почта: om@xcom.ru</span>
+        <div class="footer__links">
+          <div class="footer__item">
+            <p class="footer__label">Системная интеграция</p>
+            <div class="footer__text">
+              <a href="#">Монтаж и пусконакладка серверов</a>
+              <a href="#">Построение СХД и внедрение NAS-массивов под ключ</a>
+              <a href="#">Внедрение программного обеспечения под ключ</a>
+              <a href="#">Внедрение и сервис сетевого оборудования</a>
+              <a href="#">Внедрение офисных IP-ATC</a>
+              <a href="#">Оснащение и сервис рабочих мест</a>
+              <a href="#">Внедрение систем корпоративной печати</a>
+              <a href="#">Построение инженерных инфраструктур</a>
+              <a href="#">Внедрение и сервис систем безопасности</a>
+              <a href="#">Расчет, поставка, монтаж и обслуживание кабеленесущих систем</a>
+              <a href="#">Аутсорсинг информационной безопасности</a>
+              <a href="#">Мультимедийные решения для корпоративных коммуникаций</a>
+            </div>
           </div>
         </div>
-        <div class="footer__social">
-          <div class="footer__icons">
-            <a href="#"><img src="./assets/images/tg.svg" alt="Telegram" /></a>
-            <a href="#"><img src="./assets/images/vk.svg" alt="VK" /></a>
-            <a href="#"><img src="./assets/images/mail.svg" alt="Mail" /></a>
+
+        <div class="footer__links">
+          <div class="footer__item">
+            <p class="footer__label">Мероприятия</p>
+            <div class="footer__text">
+              <p class="footer__sub-label">2024</p>
+              <a href="#">Вебинар X-Com и Катюша</a>
+              <a href="#">Вебинар Видеорегистраторы TRASSIR</a>
+              <a href="#">Бизнес-ужин X-Com совместно с IRBIS, Systeme Electric, IDS</a>
+              <a href="#">ИТ-конференция X-Com "Energy Day"</a>
+              <a href="#">Конференция "Здрав IT"</a>
+              <a href="#">Вебинар "Печать без границ: новый уровень экономии и качества"</a>
+              <a href="#">Демо-день конкурса "Беспилотники: поможем взлететь Вашему бизнесу"</a>
+
+              <p class="footer__sub-label">2025</p>
+              <a href="#">Конференция "Цифровизация науки и образования"</a>
+              <a href="#">Вебинар "Обзор печатной техники российского производителя"</a>
+              <a href="#">Конференция "Интеграторы систем безопасности"</a>
+              <a href="#">Конференция "Pro-AV"</a>
+              <a href="#">Вебинар "Пилотные проекты российского софта"</a>
+              <a href="#">Конференция "Системы безопасности"</a>
+            </div>
           </div>
-          <a href="#" class="footer__link">Политика конфиденциальности</a>
+        </div>
+
+        <div class="footer__contacts">
+          <div class="footer__item">
+            <p class="footer__label">Контакты</p>
+            <div class="footer__text">
+              <span>+7 (495) 223-63-39 (Москва)</span>
+              <span>+7 (812) 740-11-20 (Санкт-Петербург)</span>
+              <span>Электронная почта: om@xcom.ru</span>
+            </div>
+          </div>
+          <div class="footer__social">
+            <div class="footer__icons">
+              <a href="#"><img src="./assets/images/tg.svg" alt="Telegram" /></a>
+              <a href="#"><img src="./assets/images/vk.svg" alt="VK" /></a>
+              <a href="#"><img src="./assets/images/mail.svg" alt="Mail" /></a>
+            </div>
+            <a href="#" class="footer__link">Политика конфиденциальности</a>
+          </div>
+        </div>
+
+        <div class="footer__copy">
+          <p class="footer__copy-text">Использование материалов, размещенных на сайте, допускается только с письменного разрешения «ООО М-ИНВЕСТ»</p>
+          <p class="footer__copy-text">2024 © «ООО М-ИНВЕСТ». Все права защищены.</p>
         </div>
       </div>
-
-      <div class="footer__copy">
-        <p class="footer__copy-text">Использование материалов, размещенных на сайте, допускается только с письменного
-          разрешения «ООО М-ИНВЕСТ»</p>
-        <p class="footer__copy-text">2024 © «ООО М-ИНВЕСТ». Все права защищены.</p>
+    </footer>
+    <div class="modal animate__animated" style="display: none">
+      <div class="modal__window animate__animated">
+        <div class="modal__close">
+          <span></span>
+          <span></span>
+        </div>
+        <div class="modal__content">
+          <p class="modal__headline"></p>
+          <p class="modal__text"></p>
+          <a class="modal__button button"> </a>
+        </div>
       </div>
     </div>
-  </footer>
-  <div class="modal animate__animated" style="display: none">
-    <div class="modal__window animate__animated">
-      <div class="modal__close">
-        <span></span>
-        <span></span>
-      </div>
-      <div class="modal__content">
-        <p class="modal__headline"></p>
-        <p class="modal__text"></p>
-        <a class="modal__button button"> </a>
-      </div>
-    </div>
-  </div>
-  <script src="assets/js/lines.js"></script>
-  <script src="assets/js/modal.js"></script>
-  <script src="assets/js/menu.js"></script>
-</body>
-
+    <script src="assets/js/lines.js"></script>
+    <script src="assets/js/modal.js"></script>
+    <script src="assets/js/menu.js"></script>
+  </body>
 </html>

@@ -10,14 +10,16 @@
     --gradient-main: linear-gradient(184.95deg, #afe5e1 1.95%, rgba(113, 90, 74, 0) 93.72%);
 
     // sizes
-    --size-xxxxs: calc((1vw + 1vh) * 0.2);
-    --size-xxxs: calc((1vw + 1vh) * 0.4);
-    --size-xxs: calc((1vw + 1vh) * 0.6);
-    --size-xs: calc((1vw + 1vh) * 0.8);
-    --size-sm: calc((1vw + 1vh) * 1);
-    --size-md: calc((1vw + 1vh) * 1.2);
-    --size-lg: calc((1vw + 1vh) * 2);
-    --size-xl: calc((1vw + 1vh) * 2.5);
-    --size-xxl: calc((1vw + 1vh) * 5);
-    --size-xxxl: calc((1vw + 1vh) * 10);
+    --size-base: calc(min(100vh, 100vw) * 0.02 + max(100vh, 100vw) * 0.008);
+
+    --size-xxxxs: calc(var(--size-base) * 0.2);
+    --size-xxxs: calc(var(--size-base) * 0.4);
+    --size-xxs: calc(var(--size-base) * 0.6);
+    --size-xs: calc(var(--size-base) * 0.8);
+    --size-sm: calc(var(--size-base) * 1);
+    --size-md: calc(var(--size-base) * 1.2);
+    --size-lg: calc(var(--size-base) * 2);
+    --size-xl: calc(var(--size-base) * 2.5);
+    --size-xxl: calc(var(--size-base) * 5);
+    --size-xxxl: calc(var(--size-base) * 10);
 }
