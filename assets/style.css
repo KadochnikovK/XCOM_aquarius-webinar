@@ -376,6 +376,10 @@ li {
   font-weight: 700;
   font-size: var(--size-sm);
   color: var(--color-dark);
+  transition: all 0.3s;
+}
+.menu__link:hover {
+  color: var(--color-second);
 }
 @media (min-width: 640px) {
   .menu__link {
@@ -444,7 +448,6 @@ li {
 .hero {
   color: var(--color-bright);
   background: var(--color-main);
-  min-height: 100vh;
   overflow: hidden;
   position: relative;
   align-items: center;
@@ -1024,7 +1027,7 @@ li {
   gap: var(--size-xxxs);
 }
 .footer__label {
-  font-size: var(--size-md);
+  font-size: var(--size-sm);
   font-weight: 600;
   margin-bottom: var(--space-md);
   line-height: 1.2;

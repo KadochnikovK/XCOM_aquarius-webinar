@@ -1,12 +1,10 @@
 .menu {
-
     @include md {
         margin-left: 0;
         margin-right: auto;
     }
 
     &__list {
-     
         display: none;
 
         @include sm {
@@ -23,7 +21,6 @@
             padding: 0;
         }
 
-
         position: fixed;
         top: 0;
         left: 0;
@@ -38,8 +35,9 @@
         gap: var(--size-xl);
         opacity: 0;
         visibility: hidden;
-        transition: opacity 0.3s,
-        visibility 0.3s;
+        transition:
+            opacity 0.3s,
+            visibility 0.3s;
 
         &--active {
             opacity: 1;
@@ -53,6 +51,11 @@
         font-weight: 700;
         font-size: var(--size-sm);
         color: var(--color-dark);
+        transition: all 0.3s;
+
+        &:hover {
+            color: var(--color-second);
+        }
 
         @include sm {
             font-family: Main;
@@ -75,7 +78,6 @@
         height: var(--size-md);
         z-index: 101;
 
-    
         @include sm {
             display: none;
         }
