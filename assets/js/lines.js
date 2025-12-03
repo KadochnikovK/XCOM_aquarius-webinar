@@ -7,37 +7,33 @@ class LineConnector {
     }
 
     init() {
-        // Создаем SVG
+ 
         this.svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
         this.svg.setAttribute('class', 'connector-lines');
 
-        // Вставляем в секцию schedule
+     
         const scheduleSection = document.querySelector('.schedule');
         if (scheduleSection) {
             scheduleSection.appendChild(this.svg);
         }
 
-        // Первая отрисовка
+   
         this.drawLines();
-
-        // Настройка событий
         this.setupListeners();
     }
 
     drawLines() {
-        // Отменяем предыдущий кадр анимации
+     
         if (this.animationFrameId) {
             cancelAnimationFrame(this.animationFrameId);
         }
 
-        // Очищаем SVG
         this.svg.innerHTML = '';
 
-        // Находим все точки
+    
         const dots = document.querySelectorAll('.schedule__dot');
         if (dots.length < 2) return;
 
-        // Собираем позиции точек в порядке их следования
         const points = [];
         dots.forEach(dot => {
             const rect = dot.getBoundingClientRect();
@@ -49,7 +45,6 @@ class LineConnector {
             });
         });
 
-        // Рисуем линии между точками
         for (let i = 0; i < points.length - 1; i++) {
             const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
             line.setAttribute('x1', points[i].x);
@@ -62,7 +57,7 @@ class LineConnector {
     }
 
     setupListeners() {
-        // Ресайз с задержкой
+
         window.addEventListener('resize', () => {
             // clearTimeout(this.resizeTimeout);
             // this.resizeTimeout = setTimeout(() => {
@@ -76,13 +71,12 @@ class LineConnector {
         });
     }
 
-    // Ручная перерисовка
     redraw() {
         this.drawLines();
     }
 }
 
-// Инициализация
+
 document.addEventListener('DOMContentLoaded', () => {
     setTimeout(() => {
         window.lineConnector = new LineConnector();

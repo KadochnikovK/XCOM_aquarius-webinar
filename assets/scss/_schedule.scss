@@ -12,7 +12,7 @@
         height: 100%;
         width: 100%;
 
-        // Стили для визуальных соединительных линий
+   
         &::before {
             content: "";
             position: absolute;
@@ -29,7 +29,7 @@
 
     &__item {
         position: absolute;
-        max-width: 400px;
+        max-width:30vw;
         // padding: var(--size-md);
         padding-left: var(--size-md);
         // background: rgba(255, 255, 255, 0.95);
@@ -40,7 +40,7 @@
         // border-left: 3px solid var(--color-bright);
         z-index: 2;
 
-        // Позиционирование элементов в хаотичном, но структурированном порядке
+        
         &:nth-child(1) {
             top: 5%;
             left: 0;
@@ -59,26 +59,26 @@
         &:nth-child(4) {
             top: 55%;
             left: 50%;
-            max-width: 400px;
+
         }
 
         &:nth-child(5) {
             top: 25%;
             left: 55%;
-            max-width: 400px;
+
         }
 
         &:nth-child(6) {
             top: 5%;
             left: 65%;
-            max-width: 400px;
+
         }
     }
 
     &__dot {
         position: absolute;
         left: 0;
-        top: var(--size-xxxs);
+        top: 50%;
         width: var(--size-xxxs);
         height: var(--size-xxxs);
         background-color: var(--color-bright);
@@ -189,7 +189,4 @@
     }
 }
 
-// Для работы с RGB значениями (если нужно)
-:root {
-    --color-bright-rgb: 0, 102, 204; // RGB эквивалент var(--color-bright)
-}
+

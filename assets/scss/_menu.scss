@@ -1,0 +1,129 @@
+.menu {
+
+    @include md {
+        margin-left: 0;
+        margin-right: auto;
+    }
+
+    &__list {
+     
+        display: none;
+
+        @include sm {
+            display: flex;
+            flex-direction: row;
+            position: static;
+            opacity: 1;
+            visibility: visible;
+            width: auto;
+            align-items: center;
+            gap: var(--size-lg);
+            transform: none;
+            background: none;
+            padding: 0;
+        }
+
+
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: var(--color-bg);
+        z-index: 100;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: var(--size-xl);
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s,
+        visibility 0.3s;
+
+        &--active {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+
+    &__link {
+        font-family: Second;
+        // text-transform: uppercase;
+        font-weight: 700;
+        font-size: var(--size-sm);
+        color: var(--color-dark);
+
+        @include sm {
+            font-family: Main;
+            color: var(--color-bright);
+            font-size: var(--size-sm);
+        }
+
+        @include md {
+            font-size: var(--size-base);
+        }
+    }
+
+    &__hamburger {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: relative;
+        cursor: pointer;
+        width: var(--size-xl);
+        height: var(--size-md);
+        z-index: 101;
+
+    
+        @include sm {
+            display: none;
+        }
+
+        span {
+            display: block;
+            width: 100%;
+            height: var(--size-xxxxs);
+            background-color: var(--color-second);
+            border-radius: 10pc;
+            transition: 0.3s;
+            transform-origin: center;
+        }
+
+        &--active {
+            span {
+                &:nth-child(1) {
+                    transform: translateY(calc(var(--size-md) / 2.5)) rotate(45deg);
+                }
+
+                &:nth-child(2) {
+                    opacity: 0;
+                    transform: scale(0);
+                }
+
+                &:nth-child(3) {
+                    transform: translateY(calc(var(--size-md) / -2.5)) rotate(-45deg);
+                }
+            }
+        }
+    }
+}
+
+@include sm {
+    .header__menu {
+        margin-left: 0;
+        margin-right: auto;
+    }
+
+    .menu__list {
+        position: static;
+        display: flex;
+        flex-direction: row;
+        gap: var(--size-lg);
+        opacity: 1;
+        visibility: visible;
+        width: auto;
+        height: auto;
+        background: none;
+    }
+}

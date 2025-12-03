@@ -15,7 +15,7 @@
         padding: var(--size-xl) var(--size-lg);
         background-color: var(--color-bright);
         border-radius: var(--size-sm);
-        max-width: 350px;
+        max-width: 550px;
         position: relative;
         margin: var(--size-lg);
     }
@@ -77,6 +77,6 @@
 
     &__button {
         width: max-content;
-        border: 2px solid var(--color-dark);
+        // border: 2px solid var(--color-dark);
     }
 }

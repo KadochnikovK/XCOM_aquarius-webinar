@@ -7,6 +7,10 @@
     &__button {
         margin-left: auto;
         margin-top: var(--size-sm);
+        background: var(--color-main);
+        color: var(--color-bright);
+        box-shadow: 5px 11px 6.8px rgba(0, 0, 0, 0.5);
+
     }
 
     &__wrapper {
@@ -29,6 +33,10 @@
         flex-direction: column;
         grid-column: span 2;
         position: relative;
+
+        &--full {
+            grid-column: 1 / -1 !important;
+        }
 
         &--not-valid:not(.form__item--checkbox) {
             position: relative;
@@ -99,7 +107,7 @@
         opacity: 0;
         left: 0;
 
-        & + label {
+        &+label {
             position: relative;
             cursor: pointer;
             padding: 0;
@@ -108,7 +116,7 @@
             font-weight: 500;
         }
 
-        & + label:before {
+        &+label:before {
             content: "";
             position: absolute;
             left: -30px;
@@ -120,7 +128,7 @@
             // background: var(--color-white);
         }
 
-        &:checked + label:after {
+        &:checked+label:after {
             content: "";
             position: absolute;
             left: -24px;
@@ -131,7 +139,7 @@
             border-radius: 10pc;
         }
 
-        &:focus + label:before {
+        &:focus+label:before {
             box-shadow: 0 0 0 2px var(--color-main);
         }
     }
